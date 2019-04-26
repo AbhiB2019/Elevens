@@ -104,6 +104,7 @@ public class ElevensBoard extends Board {
 	 *              include a jack, a queen, and a king; false otherwise.
 	 */
 	private boolean containsJQK(List<Integer> selectedCards) {
+		private boolean containsJQK(List<Integer> selectedCards) {
 		boolean hasJack = false;
 		boolean hasQueen = false;
 		boolean hasKing = false;
@@ -114,3 +115,15 @@ public class ElevensBoard extends Board {
 			if (rank.equals("jack"))	{
 				hasJack = true;
 			}
+			if (rank.equals("queen"))	{
+				hasQueen = true;
+			}
+			if (rank.equals("king"))	{
+				hasKing = true;
+			}
+		}
+
+		return hasJack && hasQueen && hasKing;
+	}
+}
+			
